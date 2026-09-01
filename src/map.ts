@@ -7,7 +7,7 @@ export function createMap(containerId: string): L.Map {
         minZoom: 2,
     }).setView([20, 0], 2);
 
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+    L.tileLayer(`https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png?key=${import.meta.env.VITE_MAP_API_KEY}`, {
         attribution: '© OpenStreetMap © CartoDB',
         subdomains: 'abcd',
         maxZoom: 19,
